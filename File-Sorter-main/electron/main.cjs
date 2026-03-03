@@ -8,6 +8,7 @@ function createWindow() {
     width: 1000,
     height: 750,
     autoHideMenuBar: true,
+    icon: path.join(__dirname, 'HALO.ico'),
     webPreferences: {
       // Make sure this points to your preload.cjs file
       preload: path.join(__dirname, 'preload.cjs'), 

@@ -122,8 +122,8 @@ export default function App() {
         <header className="flex items-center justify-between mb-8 bg-gray-800 p-6 rounded-2xl shadow-lg border border-gray-700">
           <div className="flex items-center gap-4">
             <div className="bg-blue-500 p-3 rounded-xl shadow-lg">
-              <Folder size={32} className="text-white" />
-            </div>
+  <Folder size={32} className="text-white" />
+</div>
             <div>
               <h1 className="text-3xl font-bold text-white tracking-tight">File Sorter</h1>
               <p className="text-gray-400 text-sm mt-1">Automated Desktop Organization</p>
