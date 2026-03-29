@@ -1,75 +1,81 @@
-Sortify
+# ⚡ Sortify — Smart File Organizer
 
-Automate your desktop chaos. One click to scan, one click to sort.
+> Automate your desktop chaos. Clean, organize, and optimize your files in seconds.
 
-Sortify is a high-performance desktop utility built with React and Electron. It intelligently scans messy directories and organizes files into logical categories, keeping your workspace pristine without the manual effort.
+Sortify is a modern desktop application built with **React + Electron** that intelligently scans and organizes files into meaningful categories — transforming cluttered directories into a clean, structured workspace.
 
-✨ Features
+---
 
-Auto-Detect: Automatically finds your Windows Desktop/OneDrive path on launch.
+## ✨ Features
 
-Two-Step Workflow: "Scan" to review what was found, then "Sort" to move them.
+### 🧠 Smart File Organization
+Automatically categorizes files into:
 
-Smart Categorization: Automatically groups files into:
+- 🖼️ Images (`.jpg`, `.png`, `.gif`, `.webp`)
+- 📄 Documents (`.pdf`, `.docx`, `.txt`, `.xlsx`)
+- 🎬 Media (`.mp4`, `.mkv`, `.mp3`, `.wav`)
+- 📦 Archives (`.zip`, `.rar`, `.7z`)
+- 💻 Code files & more
 
-🖼️ Images (.jpg, .png, .gif, .webp)
+---
 
-📄 Documents (.pdf, .docx, .txt, .xlsx)
+### ⚡ Smart Mode
+- Automatically scans and sorts files in one action  
+- No need to manually click multiple buttons  
 
-🎬 Media (.mp4, .mkv, .mp3, .wav)
+---
 
-📦 Archives (.zip, .rar, .7z)
+### 🔍 Quick Insights
+- Instantly analyzes your desktop on app launch  
+- Shows:
+  - Clutter level  
+  - File distribution  
+  - Organization suggestions  
 
-Persistent Memory: Remembers your last-used directory for next time.
+---
 
-Real-Time Logging: See exactly where every file is being moved in the activity console.
+### 📊 Analytics Dashboard
+- Visual breakdown of:
+  - File types  
+  - Storage usage  
+  - Total files  
+- Interactive charts with smooth UI  
 
-🚀 Getting Started
+---
 
-For Users (Download)
+### 📁 Directory Selector
+- Auto-detects system folders:
+  - Desktop  
+  - Downloads  
+  - Documents  
+  - Pictures / Videos / Music  
+- Safe handling (prevents system file damage)
 
-Head over to the Releases page.
+---
 
-Download the Sortify Setup.exe.
+### 🔄 Undo Sort
+- Revert last sorting action easily  
 
-Run the installer.
-Note: Since this is an independent project, you may need to click "More Info" -> "Run Anyway" on the Windows SmartScreen prompt.
+---
 
-For Developers (Local Setup)
+### 🧾 Activity Log
+- Real-time tracking of:
+  - Scanned files  
+  - Moved files  
+  - Actions performed  
 
-If you want to run the source code locally:
+---
 
-# Clone the repository
-git clone [https://github.com/spartan117here/sortify.git](https://github.com/spartan117here/sortify.git)
+### 🎨 Modern UI
+- Dark / Light mode  
+- Smooth animations  
+- Clean, minimal, professional design  
 
-# Install dependencies
-npm install
+---
 
-# Run in development mode
-npm start
+## 🚀 Getting Started
 
-# Build the installer
-npm run make
+### 🧑‍💻 For Users (Download)
 
-
-🛠️ Tech Stack
-
-Frontend: React (Vite)
-
-Desktop Wrapper: Electron
-
-Styling: Tailwind CSS
-
-Icons: Lucide React
-
-Backend: Node.js File System (FS)
-
-📝 License
-
-Distributed under the MIT License. See LICENSE for more information.
-
-🤝 Contact
-
-Project Link: https://github.com/spartan117here/sortify
-
-Built by Barath
+1. Go to the **[Releases](../../releases)** section  
+2. Download the latest version:
