@@ -1,0 +1,83 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply antialiased overflow-x-hidden;
+  }
+}
+
+/* --- ANIMATIONS --- */
+@keyframes drawPath { 
+  to { stroke-dashoffset: 0; } 
+}
+
+@keyframes glowPulse { 
+  0%, 100% { filter: drop-shadow(0 0 10px rgba(99,102,241,0.5)); } 
+  50% { filter: drop-shadow(0 0 30px rgba(236,72,153,0.8)); } 
+}
+
+@keyframes explodeLight { 
+  0% { opacity: 0; transform: scale(0.8); } 
+  50% { opacity: 1; transform: scale(1.1); } 
+  100% { opacity: 0; transform: scale(1.5); } 
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes slideUp {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* --- UTILITIES --- */
+.svg-path-anim { 
+  stroke-dasharray: 2000; 
+  stroke-dashoffset: 2000; 
+  animation: drawPath 2.5s cubic-bezier(0.8,0,0.2,1) forwards; 
+}
+
+.custom-scrollbar::-webkit-scrollbar { 
+  width: 6px; 
+}
+
+.custom-scrollbar::-webkit-scrollbar-track { 
+  background: rgba(0, 0, 0, 0.02); 
+  border-radius: 10px; 
+}
+
+.dark .custom-scrollbar::-webkit-scrollbar-track {
+  background: rgba(255, 255, 255, 0.02);
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb { 
+  background: rgba(99, 102, 241, 0.3); 
+  border-radius: 10px; 
+}
+
+.dark .custom-scrollbar::-webkit-scrollbar-thumb {
+  background: rgba(99, 102, 241, 0.2);
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb:hover { 
+  background: rgba(99, 102, 241, 0.5); 
+}
+
+/* --- CHART STYLES --- */
+.recharts-pie-sector:hover {
+  filter: brightness(1.1) drop-shadow(0 0 10px rgba(99, 102, 241, 0.4));
+  transition: all 0.3s ease;
+}
+
+.animate-pulse-slow {
+  animation: pulse 4s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+@keyframes pulse {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.5; }
+}
