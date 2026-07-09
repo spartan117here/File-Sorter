@@ -1,4 +1,4 @@
-const { app, BrowserWindow, ipcMain } = require('electron');
+const { app, BrowserWindow, ipcMain, dialog } = require('electron');
 const path = require('path');
 const fs = require('fs');
 const { execFile } = require('child_process');
@@ -257,6 +257,32 @@ ipcMain.handle('undo-sort', async () => {
     // Clear the memory after a successful revert
     sortHistory = [];
     return { success: true, count };
+  } catch (error) {
+    return { success: false, error: error.message };
+  }
+});
+
+// 4. Validate Directory API
+ipcMain.handle('validate-directory', async (event, folderPath) => {
+  try {
+    const stats = fs.statSync(folderPath);
+    return { success: stats.isDirectory() };
+  } catch (error) {
+    return { success: false, error: error.message };
+  }
+});
+
+// 5. Select Directory API
+ipcMain.handle('select-directory', async (event) => {
+  try {
+    const result = await dialog.showOpenDialog({
+      properties: ['openDirectory']
+    });
+    if (result.canceled) {
+      return { success: false, canceled: true };
+    } else {
+      return { success: true, filePaths: result.filePaths };
+    }
   } catch (error) {
     return { success: false, error: error.message };
   }

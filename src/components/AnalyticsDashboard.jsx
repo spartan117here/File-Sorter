@@ -50,7 +50,7 @@ export default function AnalyticsDashboard({
 
       {/* MAIN CHART AREA */}
       <div className="flex-1 flex flex-col relative z-10">
-        <div className="flex items-center justify-center relative h-[25vh] min-h-[220px] max-h-[340px] w-full my-2">
+        <div className="flex items-center justify-center relative h-[25vh] min-h-[280px] max-h-[340px] w-full my-2">
           {appState === 'sorted' ? (
             <div className="flex flex-col items-center gap-5 text-center py-10 opacity-100 animate-in zoom-in-95 duration-500">
               <div className="relative flex items-center justify-center">
